@@ -29,7 +29,7 @@ class Colorize:
     def syntax(self, sheet_content):
         """ Applies syntax highlighting """
 
-        # only colorize if cheat_colors is true, and stdout is a tty
+        # only colorize if cheat_colors is true, and stdout is a tty（验证是否以终端的形式运行）
         if self._config.cheat_colors is False or not sys.stdout.isatty():
             return sheet_content
 
